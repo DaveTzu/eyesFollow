@@ -22,18 +22,40 @@
 /*******************************************/
 
 body {
-
+  background-color: rgb(1, 1, 50);
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+header,footer {
+  height: 75px;
+  width: 100%;
+  border: solid 1px yellow;
 }
 
-footer {
+.art-section {
+  width: 100%;
+  height: calc(100vh - 150px);
+  border: solid 1px red;
+  display: flex;
+  justify-content: center;
+}
+
+
+.art {
+  width: 33.33%;
+  height:100%;
+  background-image: url("../images/mona-lisa.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  transform: 
+    perspective(800px) 
+    rotateY( calc(var(--eyesY) * 1deg)) 
+    rotateX( calc(var(--eyesX) * 1deg));
+  transition: transform 0.3s;
 
 }
 
