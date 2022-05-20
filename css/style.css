@@ -39,24 +39,47 @@ header,footer {
   width: 100%;
   height: calc(100vh - 150px);
   border: solid 1px red;
-  display: flex;
-  justify-content: center;
+  z-index: -1;
+  clear: both;
 }
 
-
-.art {
+.layer-container{
   width: 33.33%;
   height:100%;
-  background-image: url("../images/mona-lisa.jpg");
+  position: relative;
+  margin-left: 33%;
+  z-index: -1;
+  clear: both;
+}
+
+.eyes {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/eyes-box.png");
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: -1;
+  position: relative;
+  clear: both;
   
   transform: 
     perspective(800px) 
-    rotateY( calc(var(--eyesY) * 1deg)) 
-    rotateX( calc(var(--eyesX) * 1deg));
+    rotateY( calc(var(--eyesY) * 0.14deg)) 
+    rotateX( calc(var(--eyesX) * 0.14deg));
   transition: transform 0.3s;
+}
 
+.art{
+  width: 29vw;
+  height: 823px;
+  background-image: url("../images/mona-lisa-no-eyes.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 33vw;
+  /* opacity: .5; */
 }
 
 /******************************************

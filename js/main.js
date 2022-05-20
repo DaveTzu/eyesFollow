@@ -23,7 +23,6 @@ watchSection.addEventListener('mousemove', e => {
     }
 })
 
-
 function look(x, y){
     document.documentElement.style.setProperty('--eyesX', x)
     document.documentElement.style.setProperty('--eyesY', y)
